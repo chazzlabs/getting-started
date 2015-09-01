@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = 'hello.Application'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework:spring-context:4.2.1.RELEASE'
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version = '0.2.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
